@@ -2,16 +2,20 @@
 	/******************************************************************************************
 
 		This example takes a multipage TIFF file (example.tif) and extracts all its
-		pages to example.1.tif up to example.x.tif.
+		pages to page.0.tif up to page.x.tif.
 
 		To properly run this example, you need an existing multipage tif file called
-		'example.tif' 
+		'images/multipage.tif'.
+
+		You can get the example images here :
+
+		https://github.com/christian-vigh-phpclasses/TiffTools
 
 	 ******************************************************************************************/
 
 	require_once ( 'TiffSplitter.phpclass' ) ;
 
-	$tiff		=  TiffSplitter::Load ( 'example.tif' ) ;
+	$tiff		=  TiffSplitter::Load ( 'images/multipage.tif' ) ;
 
 	foreach ( $tiff  as  $page )
 	   {
