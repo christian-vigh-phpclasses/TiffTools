@@ -199,6 +199,12 @@ The endianness (little-endian or big-endian for 16- and 32-bits values) is prese
 
 ### Properties ###
 
+### ActualPageNumber ###
+
+Actual page number, as given by the PAGE_NUMBER tag in the IFD. This value will be set to *false* if no PAGE_NUMBER tag is present in the IFD.
+
+Beware that some TIFF files always have a PAGE_NUMBER entry, with the same value of zero for all the pages, so relying on this property value is uncertain ; use the *PageNumber* property instead. 
+
 #### PageHeight ####
 
 Page height in lines.
@@ -206,7 +212,7 @@ Page height in lines.
 
 #### PageNumber ####
 
-Corresponding page number. Starts from zero most of the time.
+Corresponding page number. Starts from zero.
 
 
 #### PageWidth ####
